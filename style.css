@@ -1,0 +1,147 @@
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0; 
+    background-color: black;
+}
+
+
+#fullCircle{
+    transform-box: fill-box;
+    animation: clockWise 50s linear infinite;
+    transform-origin: center 
+} 
+
+ #fullBlueInnerCircle  {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: counterClockWise 20s linear infinite;
+}
+
+#fadedBlueInnerCircle{
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: clockWise 30s linear infinite;
+}
+
+#redCircles{
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: clockWise 30s linear infinite;
+
+}
+
+#redCircles #fadedRedCircle{
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: clockWise 35s linear infinite;   
+}
+
+
+#yellowCircles #fullYellowCircle {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: counterClockWise 10s linear infinite;   
+}   
+
+
+#svgBox{
+    position: relative;
+}
+
+.btns{
+    cursor: pointer;
+
+}
+
+#btn1, #btn2, #btn3 {
+    stroke-width: 0; 
+    stroke: transparent; 
+    transition: stroke-width 200ms ease-in-out, stroke 200ms ease-in-out;
+    transform-origin: center;
+    animation: clockWise 60s linear infinite;  
+}
+
+#btn2{
+    animation: counterClockWise 60s linear infinite;  
+}
+
+#btn1:hover, #btn2:hover, #btn3:hover {
+    stroke: rgb(255, 255, 255); 
+    stroke-width: 1; 
+}
+
+.dialog-box{
+    width: 200px;
+    height: 100px;
+    position: absolute;
+    background: rgba(255, 255, 255, 0.11);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(7.9px);
+    -webkit-backdrop-filter: blur(7.9px);
+    display: flex;
+    flex-direction: column;
+}
+
+.close-btn-cont{
+    margin-left: auto;    
+}
+
+.close-btn{
+    cursor: pointer;
+    color: rgb(138, 138, 138);
+    background-color: transparent;
+    border: none;
+    font-size: 20px;
+}
+
+.txt-cont{
+    margin: 0px 10px;
+    overflow: hidden;
+}
+
+.txt{
+    font-size: 7px;
+    color: rgb(138, 138, 138);
+    text-align: center;
+    margin: 0;
+}
+
+
+
+
+@keyframes clockWise {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes counterClockWise {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(-360deg);
+    }
+}
+
+
+@keyframes glow {
+    0%{
+        stroke-width:0;
+    }
+    100%{
+        stroke-width:1;
+    }
+    
+}
